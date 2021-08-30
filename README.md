@@ -47,4 +47,4 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 * Grab id of each price and place them in [index.html.erb](./app/views/welcome/index.html.erb) ( Replace price... with your price id ).
 
-*`NOTE`: Do not paste product_id, you must paste price_id of each product in the above mentioned index file*
+***`NOTE`** **: Do not paste product_id, you must paste price_id of each product in the above mentioned index file***
