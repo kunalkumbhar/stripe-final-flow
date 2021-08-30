@@ -45,6 +45,27 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 * For subscription plans you can use same products with recurring price.
 
-* Grab id of each price and place them in [index.html.erb](./app/views/welcome/index.html.erb) ( Replace price... with your price id ).
+* Grab id of each price and place them in [index.html.erb](./app/views/welcome/index.html.erb) ( Replace "price..." with your price id ).
 
 ***`NOTE`** **: Do not paste product_id, you must paste price_id of each product in the above mentioned index file***
+
+## Webhooks Setup
+
+In this app we are going to setup webhook for the event invoice.paid i.e when a payment is completed an event will be triggered and you will get an email saying "Order Successful".
+
+* Run the command `./ngrok http 3000` https://07ba-59-95-8-100.ngrok.io
+
+* You will see the following:
+![ngrok](./images/ngrok.png)
+
+* Copy the "https://..." link and got to Stripe [webhooks dashboard](https://dashboard.stripe.com/test/webhooks)
+
+* Add the endpoint using the previously copied link and by selecting `invoice.paid` in events.
+
+* Now copy signing_secret of that webhook and paste it in your credentials file by running the command `EDITOR=nano rails credentials:edit`
+
+## Starting the server
+
+* Run the server using command `rails s`
+
+**That's it!! You are all set to carry out your transactions** 
