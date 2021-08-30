@@ -53,9 +53,10 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 In this app we are going to setup webhook for the event invoice.paid i.e when a payment is completed an event will be triggered and you will get an email saying "Order Successful".
 
+
 * Run the command `./ngrok http 3000` https://07ba-59-95-8-100.ngrok.io
 
-* You will see the following:
+* You will see something like this:
 ![ngrok](./images/ngrok.png)
 
 * Copy the "https://..." link and got to Stripe [webhooks dashboard](https://dashboard.stripe.com/test/webhooks)
