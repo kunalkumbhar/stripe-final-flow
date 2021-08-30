@@ -33,6 +33,7 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 * Run the command: `EDITOR=nano rails credentials:edit`
 
 * You will see the following:
+
 ![Credentails](./images/credentials.png)
 
 * Paste your public and secret keys ( Do not worry about signing_secret for now ) from Stripe dashboard into the editor.
@@ -41,7 +42,9 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 * Update your public key in [client.js](./public/js/client.js) (At the very beginning) file as well.
 
-* Go to your Stripe Dashboard and create products. Eg: ![Products](./images/products.png)
+* Go to your Stripe Dashboard and create products. Eg: 
+ 
+![Products](./images/products.png)
 
 * For subscription plans you can use same products with recurring price.
 
@@ -57,6 +60,7 @@ In this app we are going to setup webhook for the event invoice.paid i.e when a 
 * Run the command `./ngrok http 3000` https://07ba-59-95-8-100.ngrok.io
 
 * You will see something like this:
+
 ![ngrok](./images/ngrok.png)
 
 * Copy the "https://..." link and got to Stripe [webhooks dashboard](https://dashboard.stripe.com/test/webhooks)
