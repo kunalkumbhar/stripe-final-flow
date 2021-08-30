@@ -10,7 +10,7 @@
 <% @list.data.each do |list| %>
     <tr>
         <td style="border: 1px solid black; text-align: center"><%=@product.name%></td>
-        <td style="border: 1px solid black; text-align: center"><%=list['currency']%> <%=list.items.data[0].plan.amount/100%></td>
+        <td style="border: 1px solid black; text-align: center"><%=list['currency']%> <%=list.items.data[0].plan.amount.to_f/100%></td>
         <%if list.status=="active"%>
             <td style="border: 1px solid black; text-align: center; color:green"><%=list.status%></td>
         <%else%>
