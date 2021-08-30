@@ -2,9 +2,9 @@
 
 This simple app is built to understand how Stripe APIs can be used in our projects. It mainly focuses on backend operations.
 
-* Ruby version: 2.6.0
+* Ruby :diamonds: version: 2.6.0
 
-* Rails version: 6.1.4
+* Rails :railway_track: version: 6.1.4
 
 ## Prerequisites
 
@@ -14,17 +14,17 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 ## Features of App
 
-* Signup/Login
+* Signup/Login :closed_lock_with_key:
 
-* Buy multiple products/single subscription
+* Buy :shopping_cart: multiple products/single subscription
 
-* Check history of successful payments
+* Check history :hourglass: of successful payments
 
-* Cancel subscription
+* Cancel :warning: subscription
 
 * Hosted Portal
 
-* Download Receipt/Invoice
+* Download Receipt/Invoice :receipt:
 
 ## Application Setup
 
