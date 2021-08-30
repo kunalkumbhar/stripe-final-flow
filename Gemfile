@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
 gem 'stripe-rails'
+gem 'stripe_event'
 gem 'jquery-rails'
 
 group :development, :test do
@@ -48,7 +49,6 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'stripe_event'
 end
 
 group :test do

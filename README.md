@@ -6,6 +6,12 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 * Rails :railway_track: version: 6.1.4
 
+## Gems
+
+* [StripeRails](https://github.com/tansengming/stripe-rails)
+
+* [StripeEvent](https://github.com/integrallis/stripe_event)
+
 ## Prerequisites
 
 * A [Stripe](https://stripe.com/en-in) Account.
@@ -67,10 +73,12 @@ In this app we are going to setup webhook for the event invoice.paid i.e when a 
 
 * Add the endpoint using the previously copied link and by selecting `invoice.paid` in events.
 
+* In the endpoint you can add an entrypoint i.e if https://some-numbers-here.ngrok.io is the link, you can have entrypoint at https://some-numbers-here.ngrok.io/webhooks
+
 * Now copy signing_secret of that webhook and paste it in your credentials file by running the command `EDITOR=nano rails credentials:edit`
 
 ## Starting the server
 
 * Run the server using command `rails s`
 
-## **That's it!! You are all set to carry out your transactions :tada::tada::tada::tada:**
+## **That's it!! You are all set to carry out your transactions :tada::tada::tada:**
