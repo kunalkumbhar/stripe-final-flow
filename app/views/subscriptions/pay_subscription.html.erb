@@ -1,0 +1,6 @@
+<% if @subs["status"]=="active" %>
+    <h2>Subscription Successful</h2>
+<% else %>
+    <h2><%= @subs["status"] %></h2>
+<% end %>
+<script src="/packs/js/transaction.js"></script>

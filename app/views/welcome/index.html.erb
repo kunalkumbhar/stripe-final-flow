@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <br><br>
+  <a href = "/history">History</a>
+  <br><br>
+  <a href = "/portal">Portal</a>
+  <br><br>
+  <a href = "/my_subscriptions">My subscriptions</a>
+  <h3>Buy Products</h3>
+  <%= form_with url: "/checkout", method: :post do |form| %>
+    <%= check_box_tag "prod[]", "price_..." %> Prod1 --> <%="\u20B9" %>1
+    <br><%= check_box_tag "prod[]", "price_..." %> Prod2 --> <%="\u20B9" %>2
+    <br><%= check_box_tag "prod[]", "price_..." %> Prod3 --> <%="\u20B9" %>3
+    <br><br><button type="submit">Buy</button>
+  <% end %>
+  <h3>Subscribe to a plan</h3>
+  <%= form_with url: "/subscription_checkout", method: :post do |form| %>
+    <label for="plan"></label>
+    <% [ 'price_....', 'price_....', 'price_....' ].each_with_index do |pricing, index| %>
+      <%= radio_button_tag 'plan', pricing %><%= "Plan#{index+1} --> \u20B9#{0.5*(index+1)}/month" %><br>
+    <% end %>
+    
+    <br><br><button type="submit">Subscribe</button>
+  <% end %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>

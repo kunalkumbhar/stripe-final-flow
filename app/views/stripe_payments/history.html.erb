@@ -1,0 +1,27 @@
+<h1>History</h1>
+<table style="border: 2px solid black; width:1200px;">
+<tr>
+    <th style="border: 2px solid black; background-color: yellow;">Products</th>
+    <th style="border: 2px solid black; background-color: yellow;">Amount</th>
+    <th style="border: 2px solid black; background-color: yellow;">Status</th>
+    <th style="border: 2px solid black; background-color: yellow;">Paid On (DD/MM/YYYY)</th>
+    <th style="border: 2px solid black; background-color: yellow;">View Invoice</th>
+</tr>
+<% @invoices.data.each do |list| %>
+    <tr>
+        <td style="border: 1px solid black; text-align: center">
+            <% list.lines.data.each do |items| %>
+                <%=items['description']%>
+            <% end %>
+        </td>
+        <td style="border: 1px solid black; text-align: center"><%=list['currency']%> <%=list['total'].to_f/100%></td>
+        <%if list.status=="paid"%>
+            <td style="border: 1px solid black; text-align: center; color:green"><%=list.status%></td>
+        <%else%>
+            <td style="border: 1px solid black; text-align: center; color:red"><%=list.status%></td>
+        <%end%>
+        <td style="border: 1px solid black; text-align: center"><%=DateTime.strptime(list['created'].to_s, '%s').strftime('%d/%m/%Y')%></td>
+        <td style="border: 1px solid black; text-align: center"><a href = <%=list.hosted_invoice_url%>>Invoice</a></td>
+    </tr>
+<% end %>
+</table>

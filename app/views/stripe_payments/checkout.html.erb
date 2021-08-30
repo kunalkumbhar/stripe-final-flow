@@ -1,0 +1,27 @@
+<form action="/pay" method="post" id="payment-form">
+  <label for="address">Address</label>
+  <input type = "text" id="address" name="address">
+  <label for="city">City</label>
+  <input type = "text" id="city" name="city">
+  <label for="state">State</label>
+  <input type = "text" id="state" name="state">
+  <label for="country">Country</label>
+  <input type = "text" id="country" name="country">
+  <label for="country">Coupon</label>
+  <input type = "text" id="coupon" name="coupon">
+  <button id="apply_coupon">Apply Coupon</button>
+  <button id="remove_coupon" style="display:none;">Remove Coupon</button>
+  <div id="card-element">
+    <!-- Elements will create input elements here -->
+  </div>
+
+  <!-- We'll put the error messages in this element -->
+  <h3 id="amount" name="amount"><%= $price.currency.upcase %> => <%= (@amount.to_f/100).to_s %></h3>
+  <input type="hidden" id="original_amount" value="<%= $price.currency.upcase %> => <%= (@amount.to_f/100).to_s %>"></input>
+  <div id="card-errors" role="alert"></div>
+  <button id="card-button">Submit Payment</button>
+  <%= hidden_field_tag 'authenticity_token', form_authenticity_token %>
+</form>
+<link rel="stylesheet" href="user1.css">
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/packs/js/client.js"></script>
