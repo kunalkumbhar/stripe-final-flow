@@ -39,7 +39,7 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 * Also add your email and password in the credentials file.
 
-* Update your public key in [client.js](./public/packs/js/client.js) file as well.
+* Update your public key in [client.js](./public/js/client.js) file as well.
 
 * Go to your Stripe Dashboard and create products. Eg: ![Products](./images/products.png)
 
