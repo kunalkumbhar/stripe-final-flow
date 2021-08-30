@@ -39,12 +39,12 @@ This simple app is built to understand how Stripe APIs can be used in our projec
 
 * Also add your email and password in the credentials file.
 
-* Update your public key in [client.js](./public/js/client.js) file as well.
+* Update your public key in [client.js](./public/js/client.js) (At the very beginning) file as well.
 
 * Go to your Stripe Dashboard and create products. Eg: ![Products](./images/products.png)
 
 * For subscription plans you can use same products with recurring price.
 
-* Grab id of each price and place them in [index.html.erb](./app/views/welcome/index.html.erb) (Modify currency and Price accordingly).
+* Grab id of each price and place them in [index.html.erb](./app/views/welcome/index.html.erb) ( Replace price... with your price id ).
 
 *`NOTE`: Do not paste product_id, you must paste price_id of each product in the above mentioned index file*
