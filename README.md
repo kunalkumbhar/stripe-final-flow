@@ -68,4 +68,4 @@ In this app we are going to setup webhook for the event invoice.paid i.e when a 
 
 * Run the server using command `rails s`
 
-**That's it!! You are all set to carry out your transactions** 
+## **That's it!! You are all set to carry out your transactions :tada::tada::tada::tada:**
